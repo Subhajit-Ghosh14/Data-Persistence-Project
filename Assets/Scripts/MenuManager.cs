@@ -12,6 +12,7 @@ public class MenuManager : MonoBehaviour
     public TextMeshProUGUI nameText;
     public string text;
 
+
     private void Awake()
     {
         if(Instance == null)
@@ -23,11 +24,13 @@ public class MenuManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        
     }
 
     private void Start()
     {
-        text= nameText.text;
+        
     }
 
     public void LoadScene()
@@ -44,4 +47,11 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
 #endif
     }
+
+    public void ValueChanged(string s)
+    {
+        text = s;
+    }
+
+   
 }

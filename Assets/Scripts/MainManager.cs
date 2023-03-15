@@ -18,6 +18,8 @@ public class MainManager : MonoBehaviour
     
     private bool m_GameOver = false;
 
+    public Text upperText;
+
     
     // Start is called before the first frame update
     void Start()
@@ -70,6 +72,7 @@ public class MainManager : MonoBehaviour
 
     public void GameOver()
     {
+        upperText.text = "Best Score : " + MenuManager.Instance.text;
         m_GameOver = true;
         GameOverText.SetActive(true);
     }
